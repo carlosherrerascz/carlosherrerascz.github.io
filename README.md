@@ -3,12 +3,12 @@ carlosherrerasanchez.github.io
 
 ## Hello world!
 
-This is my first try at github!
+This is my first try at GitHub!
 
-My Github user page is at: 
-https://github.com/carlosherrerasanchez/
+My GitHub user page is at: 
+https://github.com/carlosherrerascz/
 
-My Github Pages repo can be found at:  
+My GitHub Pages repo can be found at:  
 https://github.com/carlosherrerascz/carlosherrerascz.github.io/
 
 And, soon, you can see my customized homepage at:
