@@ -9,7 +9,7 @@ My Github user page is at:
 https://github.com/carlosherrerasanchez/
 
 My Github Pages repo can be found at:  
-https://github.com/carlosherrerasanchez/carlosherrerasanchez.github.io/
+https://github.com/carlosherrerascz/carlosherrerascz.github.io/
 
 And, soon, you can see my customized homepage at:
 
