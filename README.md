@@ -2,8 +2,9 @@
 My personal GitHub.io website. 
 
 # Sections
-1.My resume. 
+1. My resume. 
 2. Projects I've done in the past.
+
 
 # Tools used:
 1. HTML and CSS
