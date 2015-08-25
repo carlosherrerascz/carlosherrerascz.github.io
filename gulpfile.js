@@ -16,10 +16,10 @@ var reload = browserSync.reload;
  //Scripts Task
  // Uglifies
  gulp.task('scripts', function(){
-   return gulp.src('app/pre-js/*.js')
+   return gulp.src('src/js/*.js')
         .pipe(plumber())
         .pipe(uglify())
-        .pipe(gulp.dest('app/js'));
+        .pipe(gulp.dest('./js'));
  });
 
 // Static Server + watching scss/html files
@@ -39,18 +39,18 @@ gulp.task('serve', ['sass', 'scripts'], function() {
 // Compile sass into CSS & auto-inject into browsers
 //
 gulp.task('sass', function() {
-    gulp.src("app/scss/*.scss")
+    gulp.src("src/scss/**/*.scss")
         .pipe(plumber())
         .pipe(sass())
         .pipe(CSSMinify())
-        .pipe(gulp.dest("app/css"))
+        .pipe(gulp.dest("./css"))
         .pipe(browserSync.stream());
 });
 
 gulp.task('minify-css', function() {
-    return gulp.src('app/pre-css/*.css')
+    return gulp.src('src/css/*.css')
         .pipe(CSSMinify())
-        .pipe(gulp.dest('app/css'));
+        .pipe(gulp.dest('./css'));
 });
 
 gulp.task('minify-html', function(){
@@ -71,7 +71,7 @@ gulp.task('imagemin', function() {
         svgoPlugins: [{removeViewBox:false}],
         use: [pngquant()] 
     }))
-    .pipe(gulp.dest('build/pics'));
+    .pipe(gulp.dest('./pics'));
 });
 
 
