@@ -84,3 +84,23 @@ img {
 .resumeTitle {
     color: #06F
 }
+
+@keyframes movingbox{
+    0% {transform: translateX(80%);}
+}
+
+#myPic {
+    display:block;
+    margin: auto;
+    animation:movingbox 2s 1;
+    transform: scale(0.5);
+}
+
+#aboutMeTitle {
+    opacity:0;
+}
+
+.navbar-default {
+    background-color: #F8F8F8;
+    border-color: #E7E7E7;
+}

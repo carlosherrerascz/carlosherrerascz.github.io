@@ -1,0 +1,1 @@
+$(document).ready(function(){"use strict";$("#myPic").one("animationend",function(n){$("#aboutMeTitle").fadeIn("slow")})});
