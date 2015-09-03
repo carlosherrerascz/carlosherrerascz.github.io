@@ -14,10 +14,8 @@
 <title>Carlos G. Herrera Sanchez</title>
 
 <!-- Bootstrap core CSS -->
-<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-<!--<link href="css/boostrap-min.css" rel="stylesheet">-->
-<link rel="stylesheet" href="css/bootstrap-theme-min.css" rel="stylesheet">
-<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+<!--<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="css/boostrap-min.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="css/style.css" rel="stylesheet">
@@ -40,38 +38,31 @@
 </head>
 
 <body>
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12">
-            <div id="aboutMeTitle">
-                <div class="page-header">
-                    <h1>Carlos Herrera <small>The greatest bowler of all time. No joke! (Promise!) </small></h1>
-                    <br>
-                </div>
-            </div>
-        </div> 
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
-            <img id="myPic" src="pics/prollybestbowler.jpg" alt="">
-        </div>  
-    </div>
-    <div class="row">
-        <div class="col-xs-12">
+<div id="aboutMeTitle">
+    <h1>Carlos Herrera</h1>
+    <br>
+    <p class="lead">The best bowler of all time. No joke! (Promise)</p>
+</div>
+
+<img id="myPic" src="pics/prollybestbowler.jpg" alt="">
+<!-- Close container. -->
+<div id="aboutMeContainer">
+<div class="container-fluid">
+    <div class="col-xs-12">
             <div id="aboutMeParagraph">
-                <p>Ever since I was a little kid,  I was entirely engrossed with technology. Video games, particularly. I had always appreciated how one could make so much with such weak hardware. At the age of 13, I got into Linux, and my journey into coding and open source began ever since.</p>
+                <p>Ever since I was a little kid in diapers, I was entirely engrossed with technology. Video games, particularly.</p>
+                <p>I had always appreciated how one could make so much with so little with things such as these.</p>
                 <!-- put GIF of Sonic 3 or something -->
+                <p>At the age of 13, I got into Linux, and I had gotten more and more interested in the Linux ecosystem, its distributions, and open source in general.</p>
             </div>
         </div>
     </div>
-    <!-- Close row -->
 </div>
-<!-- Close container. -->
 
 <!-- Bootstrap core JavaScript
             ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> 
+<!--<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script> -->
 <script src="js/boostrap.min.js"></script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 </body>
