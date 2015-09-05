@@ -86,17 +86,21 @@ img {
     color: #06F;
 }
 @keyframes movePic{
-    0%{transform: translateX(75%);}
+    0%{transform: translate3d(75%, 0,0);}
 }
 @keyframes moveParagraph {
     from {opacity:0;}
-    to  {opacity: 1; display: block; transform: translateY(-180%); height:auto;}
+    to  {opacity: 1; display: block; transform: translate3d(0,-180%,0); height:auto;}
 }
 #myPic {
     display:block;
     margin: auto;
     margin-top:10%;
-    animation:movePic 1.7s 1;
+    animation:movePic 1s ease-in-out 1;
+    -webkit-animation:movePic 1s ease-in-out 1;
+    -moz-animation:movePic 1s ease-in-out 1;
+    -ms-animation:movePic 1s ease-in-out 1;
+    -o-animation:movePic 1s ease-in-out 1;
 }
 .myNav {
     background-color:#353238;
@@ -107,7 +111,7 @@ img {
     top:0;
 
     #aboutMeTitle {
-        h1{color:white;}
+        h1{transition: all.3s ease-in;}
         small{color:#B8B8B8;}
         li{color:white; list-style-type:none;}
         a {
@@ -115,18 +119,19 @@ img {
             color:white;
             text-decoration:none;
         }
-        a:link{
-            color:white; 
+        a:hover{
+            color:black;    
+        }
+        #navbarBrand:hover{
+            color:#52A0B2!important;    
         }
     }
 }
 #resumeBtn:hover {background-color:#00875C;}
 #projectsBtn:hover {background-color:#00629C;}
 #navbarBrand {
-    color:white;
-}
-#navbarBrand:hover{
-    color:#8226B2;
+    transition: all .3s ease-in;
+
 }
 .row.top-buffer {
     opacity:0;
@@ -167,26 +172,26 @@ small {
     // http://stackoverflow.com/a/7354648
     @media (min-width:320px) { 
         /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
-        .top-buffer{margin-top:95%;}
-        .pic-buffer{margin-top:55%;}
+        .top-buffer{margin-top:90%;}
+        .pic-buffer{margin-top:30%;}
     }
     @media (min-width:600px) { 
         /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-        .top-buffer{margin-top:40%; }
+        .top-buffer{margin-top:-40%;}
         .pic-buffer{margin-top:15%;}
     }
     @media (min-width:801px) { 
         /* tablet, landscape iPad, lo-res laptops ands desktops */ 
         .top-buffer{margin-top:15%;}
-        .pic-buffer{margin-top:10%;}
+        .pic-buffer{margin-top:-5%;}
     }
-    @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
-        .top-buffer{margin-top:20%;}
+    @media (min-width:1024px) { /* big landscape tablets, laptops, and desktops */ 
+        .top-buffer{margin-top:15%;}
         .pic-buffer{margin-top:4%;}
     }
-    @media (min-width:1281px) { 
+    @media (min-width:1280px) { 
         /* hi-res laptops and desktops */
-        .top-buffer{margin-top:10%;}
-        .pic-buffer{margin-top:0%;}
+        .top-buffer{margin-top:15%;}
+        .pic-buffer{margin-top:-7%;}
     }
     //Neato idea #131341: make an X animation for all pics to reach the center of it from the lower left and lower right. Why? It looks cool.
