@@ -1,1 +1,1 @@
-$(document).ready(function(){$("#myPic").one("webkitAnimationEnd mozanimatoinend oanimationend msAnimationEnd animationend",function(i){$("#aboutMeTitle").css("visibility","visible").hide().fadeIn("slow")})});
+$(document).ready(function(){$("#myPic").one("webkitAnimationEnd mozanimatoinend oanimationend msAnimationEnd animationend",function(n){$(".myNav").css("visibility","visible").hide().fadeIn("slow")})});
