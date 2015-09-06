@@ -1,14 +1,14 @@
-var gulp        = require ('gulp'),
-    uglify      = require('gulp-uglify'),
-    sass        = require('gulp-sass'),
-    plumber     = require('gulp-plumber'),
-    CSSMinify  = require('gulp-minify-css'),
-    HTMLMinify = require('gulp-minify-html'), 
-    imagemin    = require('gulp-imagemin'),
+var gulp         = require ('gulp'),
+    uglify       = require('gulp-uglify'),
+    sass         = require('gulp-sass'),
+    plumber      = require('gulp-plumber'),
+    CSSMinify    = require('gulp-minify-css'),
+    HTMLMinify   = require('gulp-minify-html'), 
+    imagemin     = require('gulp-imagemin'),
     pngquant     = require('imagemin-pngquant'),
-    rename      = require('gulp-rename'), 
-    concat      = require('gulp-concat'),
-    browserSync = require('browser-sync');
+    rename       = require('gulp-rename'), 
+    concat       = require('gulp-concat'),
+    browserSync  = require('browser-sync');
     
 var reload = browserSync.reload;
 

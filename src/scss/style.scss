@@ -28,9 +28,10 @@ html * {
     width: 120px;
     height: 120px;
     display: block; margin: 0 auto 2%;
-    transition: opacity .25s ease-in-out;
     -moz-transition: opacity .25s ease-in-out;
     -webkit-transition: opacity .25s ease-in-out;
+    -o-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
 }
 .octocatPic:hover {
     cursor: pointer;
@@ -51,10 +52,16 @@ img {
 }
 .framePic {
     -webkit-filter: grayscale(0);
-    filter: none;
+    -o-filter: grayscale(0);
+    -ms-filter:grayscale(0);
+    //Firefox filter workaround
     filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='1 0 0 0 0, 0 1 0 0 0, 0 0 1 0 0, 0 0 0 1 0'/></filter></svg>#grayscale");
+    filter:none;
     -webkit-transition: all .5s ease-in-out;
-    position: relative
+    -o-transition: all .5s ease-in-out;
+    -moz-transition:all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    position: relative;
 }
 .framePic .octocatPic {
     visibility: hidden;
@@ -69,7 +76,6 @@ img {
     opacity: 0;
     -webkit-transition: all .7s ease;
     -moz-transition: all .7s ease;
-    -ms-transition: all .7s ease;
     -o-transition: all .7s ease;
     transition: all .7s ease;
 }
@@ -100,7 +106,6 @@ img {
     margin: auto;
     -webkit-animation:movePic 1s ease-in-out 1;
     -moz-animation:movePic 1s ease-in-out 1;
-    -ms-animation:movePic 1s ease-in-out 1;
     -o-animation:movePic 1s ease-in-out 1;
     animation:movePic 1s ease-in-out 1;
 }
@@ -152,9 +157,19 @@ img {
 
     position:relative;
     opacity:0;
+
+    -webkit-animation: fadeIn ease-in 1s 1;
+    -o-animation: fadeIn ease-in 1s 1;
+    -moz-animation: fadeIn ease-in 1s 1;
     animation: fadeIn ease-in 1s 1;
     -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -o-animation-delay:1.5s;
+    -moz-animation-delay:1.5s;
+    animation-delay:1.5s;
+    
+    -webkit-animation-fill-mode:forwards;
+    -moz-animation-fill-mode:forwards;
+    -o-animation-fill-mode:forwards;
     animation-fill-mode:forwards;
 }
 .navbar {
@@ -221,8 +236,13 @@ small {
     // http://stackoverflow.com/a/20457076
     #squareWrap {
         opacity:0;
+        -webkit-animation: fadeIn ease-in-out 1s 1;
+        -o-animation: fadeIn ease-in-out 1s 1;
+        -moz-animation: fadeIn ease-in-out 1s 1;
         animation: fadeIn ease-in-out 1s 1;
         -webkit-animation-delay: 2.5s;
+        -o-animation-delay: 2.5s;
+        -moz-animation-delay:2.5s;
         animation-delay: 2.5s;
         animation-fill-mode:forwards;
     }
@@ -237,7 +257,8 @@ small {
         background-size:contain; /* you change this to "contain" if you don't want the images to be cropped */
         border: 2px solid grey;
     }
-    .gulp{transition:.5s ease-in;background-image:url('../pics/webdev/gulp.png');vertical-align:middle;}
+
+    .gulp{background-image:url('../pics/webdev/gulp.png');}
     .sass {background-image:url('../pics/webdev/sass.svg');}
 
     .html5{background-image:url('../pics/webdev/html.svg');}
