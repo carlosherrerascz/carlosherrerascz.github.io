@@ -2,8 +2,7 @@ body{
     padding-top:130px;
 }
 html * {
-    font-family: 'Source Sans Pro', sans-serif;
-} #contactinfo,
+    font-family: 'Source Sans Pro', sans-serif; } #contactinfo,
 .resumeTitle {
     text-align: center;
 }
@@ -24,6 +23,7 @@ html * {
     margin: -25px auto 25px
 }
 .octocatPic {
+    content:url('../pics/biggeroctocat.png');
     opacity: .75;
     width: 120px;
     height: 120px;
@@ -67,11 +67,11 @@ img {
     bottom: 0;
     margin: auto;
     opacity: 0;
-    -webkit-transition: all 2s ease;
-    -moz-transition: all 2s ease;
-    -ms-transition: all 2s ease;
-    -o-transition: all 2s ease;
-    transition: all 2s ease;
+    -webkit-transition: all .7s ease;
+    -moz-transition: all .7s ease;
+    -ms-transition: all .7s ease;
+    -o-transition: all .7s ease;
+    transition: all .7s ease;
 }
 .framePic:hover {
     -webkit-filter: grayscale(100%);
@@ -86,21 +86,23 @@ img {
     color: #06F;
 }
 @keyframes movePic{
-    0%{transform: translate3d(75%, 0,0);}
+    from {opacity:0;transform: translate3d(75%, 0,0);}
 }
-@keyframes moveParagraph {
+
+@keyframes fadeIn {
     from {opacity:0;}
-    to  {opacity: 1; display: block; transform: translate3d(0,-180%,0); height:auto;}
+    to  {opacity:1;}
 }
+
 #myPic {
+    position:relative;
     display:block;
     margin: auto;
-    margin-top:10%;
-    animation:movePic 1s ease-in-out 1;
     -webkit-animation:movePic 1s ease-in-out 1;
     -moz-animation:movePic 1s ease-in-out 1;
     -ms-animation:movePic 1s ease-in-out 1;
     -o-animation:movePic 1s ease-in-out 1;
+    animation:movePic 1s ease-in-out 1;
 }
 .myNav {
     background-color:#353238;
@@ -124,6 +126,7 @@ img {
         }
         #navbarBrand:hover{
             color:#52A0B2!important;    
+            cursor:pointer;
         }
     }
 }
@@ -133,25 +136,26 @@ img {
     transition: all .3s ease-in;
 
 }
-.row.top-buffer {
-    opacity:0;
-    animation: moveParagraph ease-in 1s;
-    -moz-animation: moveParagraph 1s;
-    -webkit-animation: moveParagraph 1s;
-    -moz-animation-fill-mode: forwards;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
-} 
 #aboutMeParagraph {
     // Inherit .jumbotron to cover entire screen outside of containers using extend.
     @extend .jumbotron;
-    background-color: #375DFF; 
+    background-color: #303030; 
     border: none;
-    padding: 1.5em 1.5em 1.5em 1.5em;
+    padding-left:1.5em;
+    padding-right:1.5em;
+    padding-top:1.5em;
+    padding-bottom:1.5em;
     font-size: 1.3em;
     color: white;
-    clear:both;
+    border-left: .7em  solid red;
+    border-right:  .7em solid red;
+
+    position:relative;
+    opacity:0;
+    animation: fadeIn ease-in 1s 1;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    animation-fill-mode:forwards;
 }
 .navbar {
     margin-top:-2.5em;
@@ -165,33 +169,82 @@ small {
     li {transition: all 0.3s ease-in;}
 }
 
+.topicTitle{
+    color:white;
+    small {color:#FFFFFF-70;}
+    border-left:.4em solid orange;
+    padding-left:1em;
+    padding-bottom:.5em;
+    padding-top:.5em;
+    background-color:#413D70;
+    width:89%;
+}
 /*******************************************
  * MEDIA QUERIES
  *******************************************/
-    //Thanks to ryanve from stackoverflow!
+    // Some good resolutions for adaptive layouts. 
+    // Thanks to ryanve from stackoverflow!
     // http://stackoverflow.com/a/7354648
+    // smartphones, portrait iPhone, portrait 480x320 phones (Android)
     @media (min-width:320px) { 
-        /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */ 
-        .top-buffer{margin-top:90%;}
-        .pic-buffer{margin-top:30%;}
+        .top-buffer{margin-top:-10%; margin-bottom:5%;}
+        .pic-buffer{margin-top:20%; margin-bottom: 5%;}
     }
+
+    // portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) 
     @media (min-width:600px) { 
-        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-        .top-buffer{margin-top:-40%;}
-        .pic-buffer{margin-top:15%;}
+        .top-buffer{margin-top:0%; margin-bottom:0%;}
+        .pic-buffer{margin-top:15%; margin-bottom:0%;}
     }
+    // tablet, landscape iPad, lo-res laptops ands desktops  
     @media (min-width:801px) { 
-        /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-        .top-buffer{margin-top:15%;}
-        .pic-buffer{margin-top:-5%;}
+        .top-buffer{margin-top:0%; margin-bottom:-5%;}
+        .pic-buffer{margin-top:5%; margin-bottom:-5%;}
     }
-    @media (min-width:1024px) { /* big landscape tablets, laptops, and desktops */ 
-        .top-buffer{margin-top:15%;}
-        .pic-buffer{margin-top:4%;}
+    // big landscape tablets, laptops, and desktops  
+    @media (min-width:1024px) { 
+        .top-buffer{margin-top:10%; margin-bottom:1%;}
+        .pic-buffer{margin-top:5%; margin-bottom:1%;}
     }
+    // hi-res laptops and desktops 
     @media (min-width:1280px) { 
-        /* hi-res laptops and desktops */
-        .top-buffer{margin-top:15%;}
-        .pic-buffer{margin-top:-7%;}
-    }
+        .top-buffer{margin-top:8%; margin-bottom:1%;}
+        .pic-buffer{margin-top:3%;margin-bottom:1%;}
+    } 
     //Neato idea #131341: make an X animation for all pics to reach the center of it from the lower left and lower right. Why? It looks cool.
+
+    /***************************************
+     * PHOTO GALLERY GRID
+     ***************************************/
+    // Div for picture gallery. 
+    // Thanks to web-tiki from Stackoverflow!
+    // http://stackoverflow.com/a/20457076
+    #squareWrap {
+        opacity:0;
+        animation: fadeIn ease-in-out 1s 1;
+        -webkit-animation-delay: 2.5s;
+        animation-delay: 2.5s;
+        animation-fill-mode:forwards;
+    }
+    .square {
+        float:left;
+        position: relative;
+        width: 30%;
+        padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+        margin:1.66%;
+        background-position:center center;
+        background-repeat:no-repeat;
+        background-size:contain; /* you change this to "contain" if you don't want the images to be cropped */
+        border: 2px solid grey;
+    }
+    .gulp{transition:.5s ease-in;background-image:url('../pics/webdev/gulp.png');vertical-align:middle;}
+    .sass {background-image:url('../pics/webdev/sass.svg');}
+
+    .html5{background-image:url('../pics/webdev/html.svg');}
+
+    .css3{background-image:url('../pics/webdev/css3.svg');}
+
+    .bootstrap{background-image:url('../pics/webdev/bootstrap.svg');}
+
+    .jquery{background-image:url('../pics/webdev/jquery.svg');}
+

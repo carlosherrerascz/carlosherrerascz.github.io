@@ -66,7 +66,7 @@ gulp.task('minify-html', function(){
 });
 
 gulp.task('imagemin', function() {
-   return gulp.src('src/pics/*') 
+   return gulp.src('src/pics/**/*') 
     .pipe(imagemin({
         progressive:true,
         svgoPlugins: [{removeViewBox:false}],
