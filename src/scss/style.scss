@@ -202,8 +202,9 @@ small {
     // http://stackoverflow.com/a/7354648
     // smartphones, portrait iPhone, portrait 480x320 phones (Android)
     @media (min-width:320px) { 
-        .top-buffer{margin-top:-10%; margin-bottom:5%;}
-        .pic-buffer{margin-top:20%; margin-bottom: 5%;}
+        .top-buffer{margin-top:-20%; margin-bottom:5%;}
+        .pic-buffer{margin-top:45%; margin-bottom: 5%;}
+        h1{font-size:1.5em;}
     }
 
     // portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) 
