@@ -91,10 +91,31 @@ img {
 .resumeTitle {
     color: #06F;
 }
+@-webkit-keyframes movePic{
+    from {opacity:0;transform: translate3d(75%, 0,0);}
+}
+@-o-keyframes movePic{
+    from {opacity:0;transform: translate3d(75%, 0,0);}
+}
+@-moz-keyframes movePic{
+    from {opacity:0;transform: translate3d(75%, 0,0);}
+}
 @keyframes movePic{
     from {opacity:0;transform: translate3d(75%, 0,0);}
 }
 
+@-webkit-keyframes fadeIn {
+    from {opacity:0;}
+    to  {opacity:1;}
+}
+@-o-keyframes fadeIn {
+    from {opacity:0;}
+    to  {opacity:1;}
+}
+@-moz-keyframes fadeIn {
+    from {opacity:0;}
+    to  {opacity:1;}
+}
 @keyframes fadeIn {
     from {opacity:0;}
     to  {opacity:1;}
@@ -203,6 +224,7 @@ small {
     // smartphones, portrait iPhone, portrait 480x320 phones (Android)
     @media (min-width:320px) { 
         #navbarBrand {font-size:1em;}
+        
         .top-buffer{margin-top:-25%; margin-bottom:5%;}
         .pic-buffer{margin-top:15%; margin-bottom: 5%;}
     }
@@ -211,7 +233,7 @@ small {
     @media (min-width:600px) { 
         #navbarBrand {font-size:1.5em;}
         .top-buffer{margin-top:0%; margin-bottom:0%;}
-        .pic-buffer{margin-top:15%; margin-bottom:0%;}
+        .pic-buffer{margin-top:-5%; margin-bottom:0%;}
     }
     // tablet, landscape iPad, lo-res laptops ands desktops  
     @media (min-width:801px) { 
@@ -249,6 +271,10 @@ small {
         -o-animation-delay: 2.5s;
         -moz-animation-delay:2.5s;
         animation-delay: 2.5s;
+        
+        -webkit-animation-fill-mode:forwards;
+        -o-animation-fill-mode:forwards;
+        -moz-animation-fill-mode:forwards;
         animation-fill-mode:forwards;
     }
     .square {
