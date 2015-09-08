@@ -239,7 +239,7 @@ small {
     body{padding-top:75px;}
     #navbarBrand {font-size:.8em;}
     .page-header{margin-top:-20px;}
-    .top-buffer{margin-top:-50%; margin-bottom:5%;}
+    .top-buffer{margin-top:-70%; margin-bottom:5%;}
     .pic-buffer{margin-top:10%; margin-bottom: 5%;}
 }
 
@@ -248,14 +248,14 @@ small {
     body{padding-top:150px;}
     #navbarBrand {font-size:1em;}
     .page-header{margin-top:-10px;}
-    .top-buffer{margin-top:-30%; margin-bottom:0%;}
-    .pic-buffer{margin-top:0%; margin-bottom:0%;}
+    .top-buffer{margin-top:0%; margin-bottom:0%;}
+    .pic-buffer{margin-top:-5%; margin-bottom:0%;}
 }
 // tablet, landscape iPad, lo-res laptops ands desktops  
 @media (min-width:801px) { 
     #navbarBrand {font-size:1em;}
     .page-header{margin-top:-15px;}
-    .top-buffer{margin-top:-20%; margin-bottom:-5%;}
+    .top-buffer{margin-top:-10%; margin-bottom:-5%;}
     .pic-buffer{margin-top:0%; margin-bottom:-5%;}
 }
 // big landscape tablets, laptops, and desktops  
