@@ -118,6 +118,7 @@ img {
     to  {opacity:1;}
 }
 #myPic {
+    overflow:hidden;
     position:relative;
     display:block;
     margin: auto;
@@ -127,6 +128,7 @@ img {
     animation:movePic 1s ease-in-out 1;
 }
 .myNav {
+    overflow:hidden;
     background-color:#353238;
     width:100%;
     position:fixed;
