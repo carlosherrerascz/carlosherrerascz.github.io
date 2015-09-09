@@ -5,7 +5,7 @@ var gulp         = require ('gulp'),
     CSSMinify    = require('gulp-minify-css'),
     HTMLMinify   = require('gulp-minify-html'), 
     imagemin     = require('gulp-imagemin'),
-    pngquant     = require('imagemin-pngquant'),
+    //pngquant     = require('imagemin-pngquant'),
     rename       = require('gulp-rename'), 
     concat       = require('gulp-concat'),
     browserSync  = require('browser-sync');
@@ -65,15 +65,15 @@ gulp.task('minify-html', function(){
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('imagemin', function() {
-   return gulp.src('src/pics/**/*') 
-    .pipe(imagemin({
-        progressive:true,
-        svgoPlugins: [{removeViewBox:false}],
-        use: [pngquant()] 
-    }))
-    .pipe(gulp.dest('./pics'));
-});
+// gulp.task('imagemin', function() {
+//    return gulp.src('src/pics/**/*') 
+//     .pipe(imagemin({
+//         progressive:true,
+//         svgoPlugins: [{removeViewBox:false}],
+//         use: [pngquant()] 
+//     }))
+//     .pipe(gulp.dest('./pics'));
+// });
 
 
 //
@@ -81,4 +81,4 @@ gulp.task('imagemin', function() {
 // and, finally, tracks new changes to JS and SASS code so it can be compiled, minified, 
 // and previewed once more if gulp detects any new changes.
 //
-gulp.task('default', ['scripts', 'minify-css', 'sass', 'minify-html', 'imagemin',  'serve']);
+gulp.task('default', ['scripts', 'minify-css', 'sass', 'minify-html', 'serve']);
