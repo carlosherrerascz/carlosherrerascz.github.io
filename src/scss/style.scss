@@ -91,7 +91,17 @@ img {
         visibility: visible;
         opacity: 1;
     }
-    }
+}
+
+.projectDescription {
+    margin-top:30px;
+    margin-bottom:30px;
+    text-align:justify;
+    // text-justify:interword;
+    background-color:whitesmoke;
+    border: 0.3em solid #871CC7;
+    padding: 1.2em 1.2em 1.2em 1.2em;
+}
 
 @-webkit-keyframes movePic{
     from {opacity:0;transform: translate3d(75%, 0,0);}
@@ -168,12 +178,13 @@ img {
 }
 .navbar-btn {
   -webkit-transition: all .3s ease-in;
-            -moz-transition: all .3s ease-in;
-            -o-transition: all .3s ease-in;
-            transition: all .3s ease-in;
-            color:white;
+  -moz-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+           color:white;
             text-decoration:none;
-
+            margin-right: 20px;
+            border: none;
 }
 .navbar-btn:hover{background-color:#452278; color:white;}
 // #resumeBtn:hover {background-color:#452278;}
@@ -198,9 +209,9 @@ img {
 
      color: black;
     //old bg-color#9962D4
-    border-left: .7em  solid #7D7B7F;
+    border-left: .7em  solid #871CC7;
      
-    border-right:  .7em solid #7D7B7F;
+    border-right:  .7em solid #871CC7;
     position:relative;
     opacity:0;
     -webkit-animation: fadeIn ease-in 1s 1;
@@ -320,9 +331,9 @@ small {
     .top-buffer{margin-top:-10%; margin-bottom:1%;}
     .pic-buffer{margin-top:0%;margin-bottom:1%;}
               #aboutMeParagraph{
-        font-size: 2em;
+        font-size: 1.6em;
         .lead{
-            font-size:1.3em;        
+            font-size:1.5em;        
         }
     }  
 
