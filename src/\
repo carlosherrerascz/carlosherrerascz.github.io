@@ -3,15 +3,10 @@ html * {font-family: 'Source Sans Pro', sans-serif;}
 .resumeTitle {
     text-align: center;
 }
-
-.btn{margin-left:10px;}
-
+.btn{padding-right:30px;}
 .nav-collapse, .nav-collapse.collapse {
     overflow: visible;
 }   
-.navbar .navbar-default{
-    border-color:none;
-}
 .navbar .btn-navbar {
     display: none;
 }   
@@ -167,8 +162,7 @@ img {
             color:white;    
         }
         #navbarBrand:hover{
-            color:#452278+40!important;
-            
+            color:#72628A!important;    
             cursor:pointer;
         }
     }
@@ -272,10 +266,10 @@ small {
     .top-buffer{margin-top:-50%; margin-bottom:5%;}
     .pic-buffer{margin-top:10%; margin-bottom: 5%;}
     #aboutMeParagraph{
-        font-size: 1em;
+        font-size: 1.3em;
     
         .lead{
-            font-size:1.3em;        
+            font-size:1.5em;        
         }
     }      
 }
@@ -301,9 +295,9 @@ small {
     .top-buffer{margin-top:-25%; margin-bottom:5%;}
     .pic-buffer{margin-top:0%; margin-bottom:-5%;}
         #aboutMeParagraph{
-        font-size: 1.1em;
+        font-size: 1.7em;
         .lead{
-            font-size:1.3em;        
+            font-size:1.5em;        
         }
     }     
 }
@@ -314,9 +308,9 @@ small {
     .top-buffer{margin-top:-25%; margin-bottom:1%;}
     .pic-buffer{margin-top:5%; margin-bottom:1%;}
             #aboutMeParagraph{
-        font-size: 1.3em;
+        font-size: 1.8em;
         .lead{
-            font-size:1.2em;        
+            font-size:1.5em;        
         }
     }  
 }
@@ -327,7 +321,7 @@ small {
     .top-buffer{margin-top:-10%; margin-bottom:1%;}
     .pic-buffer{margin-top:0%;margin-bottom:1%;}
               #aboutMeParagraph{
-        font-size: 1.5em;
+        font-size: 2em;
         .lead{
             font-size:1.3em;        
         }
