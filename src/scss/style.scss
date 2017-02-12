@@ -9,9 +9,7 @@ html * {font-family: 'Source Sans Pro', sans-serif;}
 .nav-collapse, .nav-collapse.collapse {
     overflow: visible;
 }   
-.navbar .navbar-default{
-    border-color:none;
-}
+
 .navbar .btn-navbar {
     display: none;
 }   
@@ -147,6 +145,24 @@ img {
     -o-animation:movePic 1s ease-in-out 1;
     animation:movePic 1s ease-in-out 1;
 }
+.list-group-item {
+    ul {
+    li {
+        display:block;
+    }
+    li:before {
+         /*Using a Bootstrap glyphicon as the bullet point*/
+    content: "\e080";
+    font-family: 'Glyphicons Halflings';
+    font-size: 9px;
+    float: left;
+    margin-top: 4px;
+    margin-left: -17px;
+    color: #871CC7;
+    }
+    }
+    
+}
 .myNav {
     background-color:#353238;
     width:100%;
@@ -194,8 +210,6 @@ img {
             border: none;
 }
 .navbar-btn:hover{background-color:#452278; color:white;}
-// #resumeBtn:hover {background-color:#452278;}
-// #projectsBtn:hover {background-color:#452278;}
 #navbarBrand {
     -moz-transition: all .3s ease-in;
     -webkit-transition: all .3s ease-in;
@@ -241,7 +255,9 @@ img {
     margin-top:-2em;
     margin-bottom:-2em;
     background-color:#353238;
+    border:none;
 }
+ 
 small {
     padding-left:-30px;
 }
@@ -338,11 +354,8 @@ small {
     .top-buffer{margin-top:-10%; margin-bottom:1%;}
     .pic-buffer{margin-top:0%;margin-bottom:1%;}
               #aboutMeParagraph{
-<<<<<<< HEAD
         font-size: 1.5em;
-=======
         font-size: 1.6em;
->>>>>>> 42ea626f7fa62c969f67f04d722ef0bd36e86fa8
         .lead{
             font-size:1.5em;        
         }
